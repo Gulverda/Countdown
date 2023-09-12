@@ -1,13 +1,22 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import CountdownTimer from './layout/CountdownTimer';
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="center">
-      </header>
-    </div>
-  );
+class App extends Component {
+  handleCountdownComplete = () => {
+    // Handle what happens when the countdown is complete.
+    alert('Countdown is complete!');
+  };
+
+  render() {
+
+    return (
+      <div className="App">
+        <h1>Countdown Timer</h1>
+        <CountdownTimer targetDate="2023-09-31T00:00:00Z" />
+      </div>
+    );
+  }
 }
 
 export default App;
