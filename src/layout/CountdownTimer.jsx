@@ -2,15 +2,57 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const TimerContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  width: 100%; /* Make it take the full width */
+  margin-top: 20px; /* Add some spacing */
 `;
 
 const Countdown = styled.div`
+  display: flex;
+  flex-wrap: wrap; /* Allow countdown items to wrap on smaller screens */
+  justify-content: space-around;
   font-size: 2rem;
   font-weight: bold;
+  margin-top: 45px;
+  width: 100%; /* Make it take the full width */
 `;
+
+const TimeCont = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%; /* Set a percentage width for responsiveness */
+  max-width: 200px; /* Limit the maximum width */
+  height: 200px;
+  border-radius: 22px;
+  background: #080F1A;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  margin: 10px; /* Add some margin for spacing between items */
+
+  @media (max-width: 768px) {
+    width: 90%; /* Adjust the width for smaller screens */
+  }
+`;
+
+const TimeTitle = styled.p`
+  color: #A5DEFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+`;
+
 
 class CountdownTimer extends Component {
   constructor(props) {
@@ -57,7 +99,26 @@ class CountdownTimer extends Component {
     return (
       <TimerContainer>
         <Countdown>
-          Time Remaining: {days} days, {hours} hours, {minutes} minutes, {seconds} seconds
+          <TimeCont>
+            {days} 
+            <TimeTitle>days</TimeTitle>
+          </TimeCont>
+          
+          <TimeCont>
+            {hours}
+            <TimeTitle>hours</TimeTitle>
+          </TimeCont>
+          
+          <TimeCont>
+            {minutes}
+            <TimeTitle>minutes</TimeTitle>
+          </TimeCont>
+          
+          <TimeCont>
+            {seconds}
+            <TimeTitle>seconds</TimeTitle>
+          </TimeCont>
+          {/* {hours} hours {minutes} minutes {seconds} seconds */}
         </Countdown>
       </TimerContainer>
     );
