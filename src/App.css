@@ -7,14 +7,9 @@
 
 body{
   height: 100%;
-  background: #070724;
+  background: url(./layout/images/background.png), lightgray 50% / cover no-repeat;
+  backdrop-filter: blur(5.5px);
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
-}
-
-.App {
-  display: inlinflex;
-  justify-content: center;
-  text-align: center;
 }
