@@ -10,7 +10,7 @@ const AppContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     padding: 20px;
   }
 `;
@@ -26,24 +26,32 @@ const Title = styled.h1`
   letter-spacing: 11.25px;
   margin-top: -20px;
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 60px; /* Adjust font size for smaller screens */
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: 40px
   }
 `;
 
 const SecondTitle = styled.h2`
-color: #A5DEFF;
-text-align: center;
-font-family: Poppins;
-font-size: 32px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-letter-spacing: 6.4px;
-margin-top: 22px;
+  color: #A5DEFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 6.4px;
+  margin-top: 22px;
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: 16px;
   }
 `;
 
@@ -62,8 +70,12 @@ const TimerContainer = styled.div`
   height: auto;
   padding: 40px;
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     width: 90%; /* Adjust the width for smaller screens */
+  }
+
+  @media screen and (max-width: 550px) {
+    box-shadow: 14px 16px 12px -5px rgba(0, 0, 0, 0.50);
   }
 `;
 
