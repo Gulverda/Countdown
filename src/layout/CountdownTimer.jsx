@@ -38,8 +38,14 @@ const TimeCont = styled.div`
   line-height: normal;
   margin: 10px; /* Add some margin for spacing between items */
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     width: 90%; /* Adjust the width for smaller screens */
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 120px;
+    height: 120px;
+    font-size: 30px;
   }
 `;
 
@@ -51,6 +57,10 @@ const TimeTitle = styled.p`
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+
+  @media screen and (max-width: 550px) {
+    font-size: 12px
+  }
 `;
 
 
@@ -101,22 +111,22 @@ class CountdownTimer extends Component {
         <Countdown>
           <TimeCont>
             {days} 
-            <TimeTitle>days</TimeTitle>
+            <TimeTitle>DAYS</TimeTitle>
           </TimeCont>
           
           <TimeCont>
             {hours}
-            <TimeTitle>hours</TimeTitle>
+            <TimeTitle>HOURS</TimeTitle>
           </TimeCont>
           
           <TimeCont>
             {minutes}
-            <TimeTitle>minutes</TimeTitle>
+            <TimeTitle>MINUTES</TimeTitle>
           </TimeCont>
           
           <TimeCont>
             {seconds}
-            <TimeTitle>seconds</TimeTitle>
+            <TimeTitle>SECONDS</TimeTitle>
           </TimeCont>
           {/* {hours} hours {minutes} minutes {seconds} seconds */}
         </Countdown>
